@@ -1,5 +1,5 @@
 package com.example.testspecification.model;
 
-public enum State {
+public enum DocumentState {
     BAD, GOOD, SLAVE, LOH, SWEET
 }

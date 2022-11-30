@@ -1,6 +1,6 @@
 package com.example.testspecification.repo;
 
-import com.example.testspecification.model.State;
+import com.example.testspecification.model.DocumentState;
 import com.example.testspecification.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
@@ -26,7 +26,7 @@ public class CustomizedGroupCountRepositoryImpl implements CustomizedGroupCountR
         final CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         final CriteriaQuery<Tuple> query = criteriaBuilder.createQuery(Tuple.class);
         final Root<User> root = query.from(User.class);
-        final Path<State> expression = root.get(singularAttribute);
+        final Path<DocumentState> expression = root.get(singularAttribute);
 
         query.multiselect(expression, criteriaBuilder.count(root));
         query.select(criteriaBuilder.tuple(expression, criteriaBuilder.count(root)));

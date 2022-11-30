@@ -23,6 +23,7 @@ public class User {
     private String email;
     private int age;
     @Enumerated(value = EnumType.STRING)
-    private State state;
+    @Column(name = "document_state")
+    private DocumentState documentState;
 
 }

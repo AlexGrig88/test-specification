@@ -1,6 +1,5 @@
 package com.example.testspecification.repo;
 
-import com.example.testspecification.model.State;
 import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.metamodel.SingularAttribute;

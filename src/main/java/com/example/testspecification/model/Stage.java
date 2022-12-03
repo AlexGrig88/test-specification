@@ -1,6 +1,4 @@
 package com.example.testspecification.model;
-
-import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +6,7 @@ import java.util.List;
 import static com.example.testspecification.model.DocumentState.*;
 
 public enum Stage {
-    OK(GOOD, SWEET),
+    OK(GOOD, SWEET, DEFAULT),
     NOTOK(BAD, LOH),
     MID(SLAVE);
 

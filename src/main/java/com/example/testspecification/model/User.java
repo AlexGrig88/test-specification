@@ -7,19 +7,17 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "users")
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+@MappedSuperclass
+public abstract class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String firstName;
     private String lastName;
+    @Column(unique = true, nullable = false)
     private String email;
     private int age;
     @Enumerated(value = EnumType.STRING)
